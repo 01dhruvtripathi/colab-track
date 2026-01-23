@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colab Track - Advanced Project Collaboration Platform">
+    <title>Colab Track - Project Collaboration</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-project-diagram"></i>
+                <span>Colab Track</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#dashboard" class="nav-link active">Dashboard</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#tasks" class="nav-link">Tasks</a>
+                <a href="#teams" class="nav-link">Teams</a>
+                <a href="#analytics" class="nav-link">Analytics</a>
+            </div>
+            <div class="nav-actions">
+                <div class="notification-icon" id="notificationIcon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge" id="notificationBadge">0</span>
+                </div>
+                <div class="user-menu" id="userMenu">
+                    <img src="https://via.placeholder.com/32" alt="User" class="user-avatar">
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="#profile">Profile</a>
+                        <a href="#settings">Settings</a>
+                        <a href="#logout" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Workspaces</h3>
+                <button class="btn-icon" id="addWorkspaceBtn" title="Add Workspace">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <div class="workspace-list" id="workspaceList">
+                <!-- Workspaces will be loaded here -->
+            </div>
+            <div class="sidebar-footer">
+                <button class="btn-secondary" id="createProjectBtn">
+                    <i class="fas fa-plus"></i> New Project
+                </button>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="content-area" id="contentArea">
+            <!-- Dashboard View -->
+            <section id="dashboardView" class="view active">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <div class="page-actions">
+                        <button class="btn-primary" id="quickTaskBtn">
+                            <i class="fas fa-plus"></i> Quick Task
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Stats Cards -->
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="totalTasks">0</h3>
+                            <p>Total Tasks</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="completedTasks">0</h3>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="inProgressTasks">0</h3>
+                            <p>In Progress</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon red">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="overdueTasks">0</h3>
+                            <p>Overdue</p>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="card activity-card">
+                        <div class="card-header">
+                            <h2>Recent Activity</h2>
+                            <button class="btn-link">View All</button>
+                        </div>
+                        <div class="activity-feed" id="activityFeed">
+                            <!-- Activity items will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- My Tasks -->
+                    <div class="card tasks-card">
+                        <div class="card-header">
+                            <h2>My Tasks</h2>
+                            <div class="view-toggle">
+                                <button class="btn-icon active" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                                <button class="btn-icon" data-view="kanban">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="task-list" id="myTasksList">
+                            <!-- Tasks will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Project Progress -->
+                    <div class="card progress-card">
+                        <div class="card-header">
+                            <h2>Project Progress</h2>
+                        </div>
+                        <div class="progress-chart" id="progressChart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects View -->
+            <section id="projectsView" class="view">
+                <div class="page-header">
+                    <h1>Projects</h1>
+                    <div class="page-actions">
+                        <input type="search" class="search-input" placeholder="Search projects..." id="projectSearch">
+                        <button class="btn-primary" id="newProjectBtn">
+                            <i class="fas fa-plus"></i> New Project
+                        </button>
+                    </div>
+                </div>
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Tasks View -->
+            <section id="tasksView" class="view">
+                <div class="page-header">
+                    <h1>Tasks</h1>
+                    <div class="page-actions">
+                        <select class="filter-select" id="taskFilter">
+                            <option value="all">All Tasks</option>
+                            <option value="my">My Tasks</option>
+                            <option value="assigned">Assigned to Me</option>
+                            <option value="overdue">Overdue</option>
+                        </select>
+                        <button class="btn-primary" id="newTaskBtn">
+                            <i class="fas fa-plus"></i> New Task
+                        </button>
+                    </div>
+                </div>
+                <div class="view-switcher">
+                    <button class="view-btn active" data-view="list">
+                        <i class="fas fa-list"></i> List
+                    </button>
+                    <button class="view-btn" data-view="kanban">
+                        <i class="fas fa-th"></i> Kanban
+                    </button>
+                    <button class="view-btn" data-view="timeline">
+                        <i class="fas fa-calendar-alt"></i> Timeline
+                    </button>
+                </div>
+                <div class="tasks-container" id="tasksContainer">
+                    <!-- Tasks will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Teams View -->
+            <section id="teamsView" class="view">
+                <div class="page-header">
+                    <h1>Teams</h1>
+                    <div class="page-actions">
+                        <button class="btn-primary" id="newTeamBtn">
+                            <i class="fas fa-plus"></i> New Team
+                        </button>
+                    </div>
+                </div>
+                <div class="teams-grid" id="teamsGrid">
+                    <!-- Teams will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Analytics View -->
+            <section id="analyticsView" class="view">
+                <div class="page-header">
+                    <h1>Analytics & Reports</h1>
+                    <div class="page-actions">
+                        <select class="filter-select" id="analyticsPeriod">
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="quarter">This Quarter</option>
+                            <option value="year">This Year</option>
+                        </select>
+                        <button class="btn-secondary" id="exportReportBtn">
+                            <i class="fas fa-download"></i> Export Report
+                        </button>
+                    </div>
+                </div>
+                <div class="analytics-dashboard" id="analyticsDashboard">
+                    <!-- Analytics charts and metrics will be loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/websocket.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/models.js"></script>
+    <script src="js/services/projectService.js"></script>
+    <script src="js/services/taskService.js"></script>
+    <script src="js/services/teamService.js"></script>
+    <script src="js/services/notificationService.js"></script>
+    <script src="js/services/analyticsService.js"></script>
+    <script src="js/views/dashboardView.js"></script>
+    <script src="js/views/projectsView.js"></script>
+    <script src="js/views/tasksView.js"></script>
+    <script src="js/views/teamsView.js"></script>
+    <script src="js/views/analyticsView.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+

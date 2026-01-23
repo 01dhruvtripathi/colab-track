@@ -1,0 +1,23 @@
+{
+  "name": "colab-track-frontend",
+  "version": "1.0.0",
+  "description": "Colab Track - Advanced Project Collaboration Platform Frontend",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1",
+    "dev": "npx http-server . -p 3000 -c-1 --cors",
+    "build": "echo 'Frontend build complete'"
+  },
+  "keywords": [
+    "project-management",
+    "collaboration",
+    "task-tracking"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+
+
