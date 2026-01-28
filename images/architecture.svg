@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F9FAFB"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1F2937" text-anchor="middle">
+    Colab Track System Architecture
+  </text>
+  
+  <!-- Client Layer -->
+  <g transform="translate(100, 80)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#4F46E5">
+      Client Layer
+    </text>
+    
+    <!-- Web Client -->
+    <rect x="50" y="40" width="200" height="100" rx="10" fill="white" stroke="#4F46E5" stroke-width="2"/>
+    <text x="150" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      🌐 Web Application
+    </text>
+    <text x="150" y="90" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+      HTML5, CSS3
+    </text>
+    <text x="150" y="105" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+      JavaScript ES6+
+    </text>
+    <text x="150" y="120" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+      WebSocket Client
+    </text>
+    
+    <!-- Mobile Client -->
+    <rect x="300" y="40" width="200" height="100" rx="10" fill="white" stroke="#4F46E5" stroke-width="2"/>
+    <text x="400" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      📱 Mobile App
+    </text>
+    <text x="400" y="90" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+      iOS / Android
+    </text>
+    <text x="400" y="105" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+      Native / React Native
+    </text>
+    
+    <!-- Desktop Client -->
+    <rect x="550" y="40" width="200" height="100" rx="10" fill="white" stroke="#4F46E5" stroke-width="2"/>
+    <text x="650" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      💻 Desktop App
+    </text>
+    <text x="650" y="90" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+      Electron
+    </text>
+    <text x="650" y="105" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+      Cross-platform
+    </text>
+  </g>
+  
+  <!-- API Gateway Layer -->
+  <g transform="translate(100, 280)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#10B981">
+      API Gateway
+    </text>
+    
+    <rect x="50" y="40" width="700" height="80" rx="10" fill="white" stroke="#10B981" stroke-width="2"/>
+    <text x="400" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      🔐 API Gateway &amp; Load Balancer
+    </text>
+    <text x="400" y="90" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+      Authentication | Rate Limiting | Request Routing | WebSocket Gateway
+    </text>
+  </g>
+  
+  <!-- Arrows from Client to API Gateway -->
+  <line x1="250" y1="180" x2="250" y2="320" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="180" x2="500" y2="320" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="750" y1="180" x2="750" y2="320" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Backend Services Layer -->
+  <g transform="translate(100, 440)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#F59E0B">
+      Backend Services (Microservices)
+    </text>
+    
+    <!-- User Service -->
+    <rect x="50" y="40" width="150" height="80" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+    <text x="125" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      👤 User Service
+    </text>
+    <text x="125" y="85" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Spring Boot
+    </text>
+    <text x="125" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Authentication
+    </text>
+    
+    <!-- Project Service -->
+    <rect x="220" y="40" width="150" height="80" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+    <text x="295" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      📁 Project Service
+    </text>
+    <text x="295" y="85" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Spring Boot
+    </text>
+    <text x="295" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      CRUD Operations
+    </text>
+    
+    <!-- Task Service -->
+    <rect x="390" y="40" width="150" height="80" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+    <text x="465" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      ✅ Task Service
+    </text>
+    <text x="465" y="85" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Spring Boot
+    </text>
+    <text x="465" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Workflow Engine
+    </text>
+    
+    <!-- Notification Service -->
+    <rect x="560" y="40" width="150" height="80" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+    <text x="635" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      🔔 Notification
+    </text>
+    <text x="635" y="85" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Spring Boot
+    </text>
+    <text x="635" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Email/Push/WS
+    </text>
+  </g>
+  
+  <!-- Arrows from API Gateway to Services -->
+  <line x1="250" y1="400" x2="225" y2="480" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="400" x2="395" y2="480" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="400" x2="565" y2="480" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="400" x2="735" y2="480" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Data Layer -->
+  <g transform="translate(100, 600)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#8B5CF6">
+      Data Layer
+    </text>
+    
+    <!-- Database -->
+    <rect x="50" y="40" width="200" height="80" rx="8" fill="white" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="150" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      🗄️ PostgreSQL
+    </text>
+    <text x="150" y="85" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Primary Database
+    </text>
+    <text x="150" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Master-Replica
+    </text>
+    
+    <!-- Cache -->
+    <rect x="270" y="40" width="200" height="80" rx="8" fill="white" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="370" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      ⚡ Redis Cache
+    </text>
+    <text x="370" y="85" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Session Store
+    </text>
+    <text x="370" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Real-time Data
+    </text>
+    
+    <!-- File Storage -->
+    <rect x="490" y="40" width="220" height="80" rx="8" fill="white" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="600" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      ☁️ Object Storage
+    </text>
+    <text x="600" y="85" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      AWS S3 / MinIO
+    </text>
+    <text x="600" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Files &amp; Documents
+    </text>
+  </g>
+  
+  <!-- Arrows from Services to Data Layer -->
+  <line x1="225" y1="560" x2="175" y2="640" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="395" y1="560" x2="370" y2="640" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="565" y1="560" x2="600" y2="640" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- External Integrations -->
+  <g transform="translate(850, 280)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#EF4444">
+      External Services
+    </text>
+    
+    <rect x="20" y="40" width="180" height="60" rx="8" fill="white" stroke="#EF4444" stroke-width="2"/>
+    <text x="110" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      🔐 OAuth Providers
+    </text>
+    <text x="110" y="85" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Google, GitHub, SSO
+    </text>
+    
+    <rect x="20" y="120" width="180" height="60" rx="8" fill="white" stroke="#EF4444" stroke-width="2"/>
+    <text x="110" y="145" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      📧 Email Service
+    </text>
+    <text x="110" y="165" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      SendGrid / AWS SES
+    </text>
+    
+    <rect x="20" y="200" width="180" height="60" rx="8" fill="white" stroke="#EF4444" stroke-width="2"/>
+    <text x="110" y="225" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      📊 Analytics
+    </text>
+    <text x="110" y="245" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Google Analytics
+    </text>
+    
+    <rect x="20" y="280" width="180" height="60" rx="8" fill="white" stroke="#EF4444" stroke-width="2"/>
+    <text x="110" y="305" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      🔗 Webhooks
+    </text>
+    <text x="110" y="325" font-family="Arial, sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">
+      Slack, Discord, etc.
+    </text>
+  </g>
+  
+  <!-- Arrows to External Services -->
+  <line x1="800" y1="360" x2="870" y2="370" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="800" y1="360" x2="870" y2="450" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="735" y1="520" x2="870" y2="530" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Infrastructure Layer Note -->
+  <rect x="850" y="600" width="280" height="140" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="990" y="630" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937" text-anchor="middle">
+    🚀 Infrastructure
+  </text>
+  <text x="870" y="655" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+    • Docker Containers
+  </text>
+  <text x="870" y="675" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+    • Kubernetes Orchestration
+  </text>
+  <text x="870" y="695" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+    • CI/CD Pipeline (GitHub Actions)
+  </text>
+  <text x="870" y="715" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+    • Monitoring (Prometheus/Grafana)
+  </text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#6B7280"/>
+    </marker>
+  </defs>
+</svg>

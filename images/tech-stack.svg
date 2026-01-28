@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#F9FAFB"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1F2937" text-anchor="middle">
+    Technology Stack
+  </text>
+  
+  <!-- Frontend Technologies -->
+  <g transform="translate(50, 80)">
+    <rect width="340" height="560" rx="15" fill="white" stroke="#4F46E5" stroke-width="3"/>
+    <rect width="340" height="60" rx="15" fill="#4F46E5"/>
+    <text x="170" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+      🎨 Frontend
+    </text>
+    
+    <!-- HTML5 -->
+    <g transform="translate(30, 90)">
+      <rect width="280" height="70" rx="8" fill="#EEF2FF"/>
+      <circle cx="35" cy="35" r="25" fill="#E34F26"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        5
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        HTML5
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Semantic markup, accessibility
+      </text>
+    </g>
+    
+    <!-- CSS3 -->
+    <g transform="translate(30, 175)">
+      <rect width="280" height="70" rx="8" fill="#EEF2FF"/>
+      <circle cx="35" cy="35" r="25" fill="#1572B6"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        3
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        CSS3
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Flexbox, Grid, animations
+      </text>
+    </g>
+    
+    <!-- JavaScript -->
+    <g transform="translate(30, 260)">
+      <rect width="280" height="70" rx="8" fill="#EEF2FF"/>
+      <circle cx="35" cy="35" r="25" fill="#F7DF1E"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937" text-anchor="middle">
+        JS
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        JavaScript ES6+
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Modern JS, async/await
+      </text>
+    </g>
+    
+    <!-- WebSocket -->
+    <g transform="translate(30, 345)">
+      <rect width="280" height="70" rx="8" fill="#EEF2FF"/>
+      <circle cx="35" cy="35" r="25" fill="#010101"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        WS
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        WebSocket API
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Real-time communication
+      </text>
+    </g>
+    
+    <!-- Build Tools -->
+    <g transform="translate(30, 430)">
+      <rect width="280" height="70" rx="8" fill="#EEF2FF"/>
+      <circle cx="35" cy="35" r="25" fill="#CB3837"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+        npm
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        npm / Webpack
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Package management, bundling
+      </text>
+    </g>
+  </g>
+  
+  <!-- Backend Technologies -->
+  <g transform="translate(430, 80)">
+    <rect width="340" height="560" rx="15" fill="white" stroke="#10B981" stroke-width="3"/>
+    <rect width="340" height="60" rx="15" fill="#10B981"/>
+    <text x="170" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+      ⚙️ Backend
+    </text>
+    
+    <!-- Java -->
+    <g transform="translate(30, 90)">
+      <rect width="280" height="70" rx="8" fill="#D1FAE5"/>
+      <circle cx="35" cy="35" r="25" fill="#007396"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        ☕
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        Java 17+
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        LTS version, modern features
+      </text>
+    </g>
+    
+    <!-- Spring Boot -->
+    <g transform="translate(30, 175)">
+      <rect width="280" height="70" rx="8" fill="#D1FAE5"/>
+      <circle cx="35" cy="35" r="25" fill="#6DB33F"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        🍃
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        Spring Boot 3.x
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        REST API, dependency injection
+      </text>
+    </g>
+    
+    <!-- Spring Security -->
+    <g transform="translate(30, 260)">
+      <rect width="280" height="70" rx="8" fill="#D1FAE5"/>
+      <circle cx="35" cy="35" r="25" fill="#6DB33F"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        🔐
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        Spring Security
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        JWT, OAuth2, authentication
+      </text>
+    </g>
+    
+    <!-- Spring Data JPA -->
+    <g transform="translate(30, 345)">
+      <rect width="280" height="70" rx="8" fill="#D1FAE5"/>
+      <circle cx="35" cy="35" r="25" fill="#6DB33F"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        📊
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        Spring Data JPA
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        ORM, database abstraction
+      </text>
+    </g>
+    
+    <!-- Maven -->
+    <g transform="translate(30, 430)">
+      <rect width="280" height="70" rx="8" fill="#D1FAE5"/>
+      <circle cx="35" cy="35" r="25" fill="#C71A36"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+        M
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        Maven
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Build automation, dependencies
+      </text>
+    </g>
+  </g>
+  
+  <!-- Database & Storage -->
+  <g transform="translate(810, 80)">
+    <rect width="340" height="290" rx="15" fill="white" stroke="#8B5CF6" stroke-width="3"/>
+    <rect width="340" height="60" rx="15" fill="#8B5CF6"/>
+    <text x="170" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+      💾 Database
+    </text>
+    
+    <!-- PostgreSQL -->
+    <g transform="translate(30, 90)">
+      <rect width="280" height="70" rx="8" fill="#DDD6FE"/>
+      <circle cx="35" cy="35" r="25" fill="#336791"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        🐘
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        PostgreSQL 12+
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Primary relational database
+      </text>
+    </g>
+    
+    <!-- Redis -->
+    <g transform="translate(30, 175)">
+      <rect width="280" height="70" rx="8" fill="#DDD6FE"/>
+      <circle cx="35" cy="35" r="25" fill="#DC382D"/>
+      <text x="35" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        ⚡
+      </text>
+      <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        Redis
+      </text>
+      <text x="80" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Caching, session management
+      </text>
+    </g>
+  </g>
+  
+  <!-- DevOps & Infrastructure -->
+  <g transform="translate(810, 400)">
+    <rect width="340" height="240" rx="15" fill="white" stroke="#F59E0B" stroke-width="3"/>
+    <rect width="340" height="60" rx="15" fill="#F59E0B"/>
+    <text x="170" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">
+      🚀 DevOps
+    </text>
+    
+    <!-- Docker -->
+    <g transform="translate(30, 90)">
+      <rect width="280" height="60" rx="8" fill="#FEF3C7"/>
+      <circle cx="30" cy="30" r="22" fill="#2496ED"/>
+      <text x="30" y="37" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        🐳
+      </text>
+      <text x="70" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        Docker
+      </text>
+      <text x="70" y="45" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Containerization
+      </text>
+    </g>
+    
+    <!-- Kubernetes -->
+    <g transform="translate(30, 165)">
+      <rect width="280" height="60" rx="8" fill="#FEF3C7"/>
+      <circle cx="30" cy="30" r="22" fill="#326CE5"/>
+      <text x="30" y="37" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        ☸
+      </text>
+      <text x="70" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+        Kubernetes
+      </text>
+      <text x="70" y="45" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Orchestration, scaling
+      </text>
+    </g>
+  </g>
+</svg>

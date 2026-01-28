@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F9FAFB"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="80" fill="#4F46E5"/>
+  <text x="30" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">
+    Colab Track Dashboard
+  </text>
+  
+  <!-- Search bar -->
+  <rect x="400" y="25" width="300" height="30" rx="15" fill="white" opacity="0.2"/>
+  <text x="420" y="47" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.7">
+    Search projects, tasks...
+  </text>
+  
+  <!-- User profile -->
+  <circle cx="1150" cy="40" r="20" fill="white"/>
+  
+  <!-- Sidebar -->
+  <rect x="20" y="100" width="250" height="680" rx="10" fill="white"/>
+  <text x="40" y="140" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1F2937">
+    Workspaces
+  </text>
+  
+  <!-- Sidebar items -->
+  <rect x="40" y="160" width="210" height="40" rx="8" fill="#EEF2FF"/>
+  <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="#4F46E5">📊 All Projects</text>
+  
+  <rect x="40" y="210" width="210" height="40" rx="8" fill="white"/>
+  <text x="60" y="235" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">👥 My Teams</text>
+  
+  <rect x="40" y="260" width="210" height="40" rx="8" fill="white"/>
+  <text x="60" y="285" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">✅ My Tasks</text>
+  
+  <rect x="40" y="310" width="210" height="40" rx="8" fill="white"/>
+  <text x="60" y="335" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">📈 Analytics</text>
+  
+  <!-- Main content area -->
+  <rect x="290" y="100" width="890" height="680" rx="10" fill="white"/>
+  
+  <!-- Stats cards -->
+  <g transform="translate(310, 120)">
+    <!-- Active Projects -->
+    <rect width="200" height="120" rx="8" fill="#EEF2FF"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">Active Projects</text>
+    <text x="20" y="75" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#4F46E5">24</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="#10B981">↑ 12% this month</text>
+  </g>
+  
+  <g transform="translate(530, 120)">
+    <!-- Tasks Completed -->
+    <rect width="200" height="120" rx="8" fill="#ECFDF5"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">Tasks Completed</text>
+    <text x="20" y="75" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#10B981">156</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="#10B981">↑ 8% this week</text>
+  </g>
+  
+  <g transform="translate(750, 120)">
+    <!-- Team Members -->
+    <rect width="200" height="120" rx="8" fill="#FEF3C7"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">Team Members</text>
+    <text x="20" y="75" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#F59E0B">48</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="#10B981">↑ 4 new members</text>
+  </g>
+  
+  <g transform="translate(970, 120)">
+    <!-- Avg Completion -->
+    <rect width="190" height="120" rx="8" fill="#FEE2E2"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">Avg Completion</text>
+    <text x="20" y="75" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#EF4444">85%</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="#10B981">↑ 3% improvement</text>
+  </g>
+  
+  <!-- Recent Projects Section -->
+  <text x="310" y="280" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1F2937">
+    Recent Projects
+  </text>
+  
+  <!-- Project Cards -->
+  <g transform="translate(310, 300)">
+    <rect width="840" height="80" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="30" cy="40" r="15" fill="#4F46E5"/>
+    <text x="60" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+      E-commerce Platform Redesign
+    </text>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">
+      15 tasks • 5 members • Due in 3 days
+    </text>
+    <rect x="700" y="25" width="100" height="30" rx="15" fill="#10B981"/>
+    <text x="730" y="47" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
+      On Track
+    </text>
+  </g>
+  
+  <g transform="translate(310, 395)">
+    <rect width="840" height="80" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="30" cy="40" r="15" fill="#10B981"/>
+    <text x="60" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+      Mobile App Development
+    </text>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">
+      28 tasks • 8 members • Due in 2 weeks
+    </text>
+    <rect x="700" y="25" width="100" height="30" rx="15" fill="#F59E0B"/>
+    <text x="730" y="47" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
+      In Progress
+    </text>
+  </g>
+  
+  <g transform="translate(310, 490)">
+    <rect width="840" height="80" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="30" cy="40" r="15" fill="#EF4444"/>
+    <text x="60" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">
+      Marketing Campaign Q1 2026
+    </text>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">
+      42 tasks • 12 members • Due tomorrow
+    </text>
+    <rect x="700" y="25" width="100" height="30" rx="15" fill="#EF4444"/>
+    <text x="730" y="47" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
+      At Risk
+    </text>
+  </g>
+  
+  <!-- Activity Section -->
+  <text x="310" y="610" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1F2937">
+    Recent Activity
+  </text>
+  
+  <g transform="translate(310, 630)">
+    <circle cx="10" cy="15" r="5" fill="#4F46E5"/>
+    <text x="25" y="20" font-family="Arial, sans-serif" font-size="13" fill="#1F2937">
+      John Doe completed task "Design homepage mockup"
+    </text>
+    <text x="25" y="35" font-family="Arial, sans-serif" font-size="11" fill="#9CA3AF">
+      2 minutes ago
+    </text>
+  </g>
+  
+  <g transform="translate(310, 680)">
+    <circle cx="10" cy="15" r="5" fill="#10B981"/>
+    <text x="25" y="20" font-family="Arial, sans-serif" font-size="13" fill="#1F2937">
+      Sarah Smith created new project "Customer Portal"
+    </text>
+    <text x="25" y="35" font-family="Arial, sans-serif" font-size="11" fill="#9CA3AF">
+      15 minutes ago
+    </text>
+  </g>
+  
+  <g transform="translate(310, 730)">
+    <circle cx="10" cy="15" r="5" fill="#F59E0B"/>
+    <text x="25" y="20" font-family="Arial, sans-serif" font-size="13" fill="#1F2937">
+      Team meeting scheduled for tomorrow at 10:00 AM
+    </text>
+    <text x="25" y="35" font-family="Arial, sans-serif" font-size="11" fill="#9CA3AF">
+      1 hour ago
+    </text>
+  </g>
+</svg>
