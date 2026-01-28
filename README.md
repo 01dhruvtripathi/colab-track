@@ -1,7 +1,7 @@
 # Colab Track - Advanced Project Collaboration Platform
 
 <div align="center">
-  <img src="images/logo.png" alt="Colab Track Logo" width="200"/>
+  <img src="images/logo.svg" alt="Colab Track Logo" width="200"/>
   
   <p><strong>A comprehensive project management and collaboration tool with real-time features, analytics, and enterprise-grade security.</strong></p>
   
@@ -17,13 +17,13 @@
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="images/dashboard.png" alt="Dashboard View" width="800"/>
+  <img src="images/dashboard.svg" alt="Dashboard View" width="800"/>
   <p><em>Main Dashboard with Project Overview</em></p>
   
-  <img src="images/kanban-board.png" alt="Kanban Board" width="800"/>
+  <img src="images/kanban-board.svg" alt="Kanban Board" width="800"/>
   <p><em>Kanban Board for Task Management</em></p>
   
-  <img src="images/analytics.png" alt="Analytics Dashboard" width="800"/>
+  <img src="images/analytics.svg" alt="Analytics Dashboard" width="800"/>
   <p><em>Real-time Analytics and Insights</em></p>
 </div>
 
@@ -126,7 +126,7 @@
 ## 🏗️ Architecture
 
 <div align="center">
-  <img src="images/architecture.png" alt="System Architecture" width="800"/>
+  <img src="images/architecture.svg" alt="System Architecture" width="800"/>
   <p><em>High-level System Architecture</em></p>
 </div>
 
@@ -164,7 +164,7 @@ colab-track/
 ## 🛠️ Technology Stack
 
 <div align="center">
-  <img src="images/tech-stack.png" alt="Technology Stack" width="800"/>
+  <img src="images/tech-stack.svg" alt="Technology Stack" width="800"/>
 </div>
 
 | Layer | Technologies |
@@ -272,7 +272,7 @@ The application will be available at:
 ## 📝 API Documentation
 
 <div align="center">
-  <img src="images/api-docs.png" alt="API Documentation" width="800"/>
+  <img src="images/api-docs.svg" alt="API Documentation" width="800"/>
 </div>
 
 ### Key Endpoints
