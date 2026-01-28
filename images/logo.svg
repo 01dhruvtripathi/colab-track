@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="#4F46E5" opacity="0.1"/>
+  
+  <!-- Main logo circle -->
+  <circle cx="200" cy="200" r="160" fill="#4F46E5"/>
+  
+  <!-- Collaboration icon - interconnected nodes -->
+  <g transform="translate(200, 200)">
+    <!-- Center node -->
+    <circle cx="0" cy="0" r="25" fill="white"/>
+    
+    <!-- Top node -->
+    <line x1="0" y1="0" x2="0" y2="-60" stroke="white" stroke-width="8" opacity="0.8"/>
+    <circle cx="0" cy="-60" r="20" fill="white"/>
+    
+    <!-- Right node -->
+    <line x1="0" y1="0" x2="52" y2="30" stroke="white" stroke-width="8" opacity="0.8"/>
+    <circle cx="52" cy="30" r="20" fill="white"/>
+    
+    <!-- Bottom right node -->
+    <line x1="0" y1="0" x2="52" y2="70" stroke="white" stroke-width="8" opacity="0.8"/>
+    <circle cx="52" cy="70" r="18" fill="white"/>
+    
+    <!-- Left node -->
+    <line x1="0" y1="0" x2="-52" y2="30" stroke="white" stroke-width="8" opacity="0.8"/>
+    <circle cx="-52" cy="30" r="20" fill="white"/>
+    
+    <!-- Bottom left node -->
+    <line x1="0" y1="0" x2="-52" y2="70" stroke="white" stroke-width="8" opacity="0.8"/>
+    <circle cx="-52" cy="70" r="18" fill="white"/>
+    
+    <!-- Cross connections -->
+    <line x1="-52" y1="30" x2="52" y2="30" stroke="white" stroke-width="4" opacity="0.4"/>
+    <line x1="-52" y1="70" x2="52" y2="70" stroke="white" stroke-width="4" opacity="0.4"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="380" font-family="Arial, sans-serif" font-size="36" font-weight="bold" 
+        fill="#4F46E5" text-anchor="middle">Colab Track</text>
+</svg>

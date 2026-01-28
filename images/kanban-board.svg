@@ -1,0 +1,299 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F3F4F6"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="white"/>
+  <text x="30" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1F2937">
+    Project: E-commerce Platform Redesign
+  </text>
+  <text x="950" y="45" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+    View: Kanban Board
+  </text>
+  
+  <!-- Kanban Columns -->
+  <!-- To Do Column -->
+  <g transform="translate(30, 100)">
+    <rect width="270" height="650" rx="10" fill="white"/>
+    <rect width="270" height="50" rx="10" fill="#EEF2FF"/>
+    <text x="20" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4F46E5">
+      📋 To Do
+    </text>
+    <text x="230" y="32" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+      5
+    </text>
+    
+    <!-- Task Cards -->
+    <g transform="translate(15, 70)">
+      <rect width="240" height="110" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#EF4444"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Update product catalog
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Add new products and update...
+      </text>
+      <rect x="15" y="65" width="60" height="20" rx="10" fill="#FEE2E2"/>
+      <text x="28" y="79" font-family="Arial, sans-serif" font-size="10" fill="#EF4444">
+        High
+      </text>
+      <circle cx="25" cy="95" r="10" fill="#4F46E5"/>
+      <text x="40" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">
+        Sarah M.
+      </text>
+      <text x="180" y="100" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Jan 30
+      </text>
+    </g>
+    
+    <g transform="translate(15, 195)">
+      <rect width="240" height="100" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#F59E0B"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Design checkout flow
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Create wireframes for new...
+      </text>
+      <rect x="15" y="60" width="70" height="20" rx="10" fill="#FEF3C7"/>
+      <text x="25" y="74" font-family="Arial, sans-serif" font-size="10" fill="#F59E0B">
+        Medium
+      </text>
+      <circle cx="25" cy="88" r="10" fill="#10B981"/>
+      <text x="180" y="93" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Feb 2
+      </text>
+    </g>
+    
+    <g transform="translate(15, 310)">
+      <rect width="240" height="90" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#10B981"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        API documentation
+      </text>
+      <rect x="15" y="45" width="50" height="20" rx="10" fill="#D1FAE5"/>
+      <text x="25" y="59" font-family="Arial, sans-serif" font-size="10" fill="#10B981">
+        Low
+      </text>
+      <circle cx="25" cy="75" r="10" fill="#F59E0B"/>
+      <text x="180" y="80" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Feb 5
+      </text>
+    </g>
+  </g>
+  
+  <!-- In Progress Column -->
+  <g transform="translate(320, 100)">
+    <rect width="270" height="650" rx="10" fill="white"/>
+    <rect width="270" height="50" rx="10" fill="#FEF3C7"/>
+    <text x="20" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#F59E0B">
+      ⚡ In Progress
+    </text>
+    <text x="230" y="32" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+      3
+    </text>
+    
+    <g transform="translate(15, 70)">
+      <rect width="240" height="120" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#EF4444"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Shopping cart integration
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Implement add to cart and...
+      </text>
+      <rect x="15" y="65" width="60" height="20" rx="10" fill="#FEE2E2"/>
+      <text x="28" y="79" font-family="Arial, sans-serif" font-size="10" fill="#EF4444">
+        High
+      </text>
+      <rect x="85" y="65" width="80" height="20" rx="10" fill="#EEF2FF"/>
+      <text x="95" y="79" font-family="Arial, sans-serif" font-size="10" fill="#4F46E5">
+        💻 Backend
+      </text>
+      <circle cx="25" cy="100" r="10" fill="#EF4444"/>
+      <text x="40" y="105" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">
+        John D.
+      </text>
+      <text x="170" y="105" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Jan 29
+      </text>
+    </g>
+    
+    <g transform="translate(15, 205)">
+      <rect width="240" height="110" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#F59E0B"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Payment gateway setup
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Configure Stripe payment...
+      </text>
+      <rect x="15" y="60" width="70" height="20" rx="10" fill="#FEF3C7"/>
+      <text x="25" y="74" font-family="Arial, sans-serif" font-size="10" fill="#F59E0B">
+        Medium
+      </text>
+      <circle cx="25" cy="93" r="10" fill="#8B5CF6"/>
+      <text x="180" y="98" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Jan 31
+      </text>
+    </g>
+    
+    <g transform="translate(15, 330)">
+      <rect width="240" height="100" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#10B981"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Email notifications
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Setup order confirmation...
+      </text>
+      <rect x="15" y="60" width="50" height="20" rx="10" fill="#D1FAE5"/>
+      <text x="25" y="74" font-family="Arial, sans-serif" font-size="10" fill="#10B981">
+        Low
+      </text>
+      <circle cx="25" cy="88" r="10" fill="#10B981"/>
+      <text x="180" y="93" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Feb 3
+      </text>
+    </g>
+  </g>
+  
+  <!-- In Review Column -->
+  <g transform="translate(610, 100)">
+    <rect width="270" height="650" rx="10" fill="white"/>
+    <rect width="270" height="50" rx="10" fill="#DDD6FE"/>
+    <text x="20" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#8B5CF6">
+      👀 In Review
+    </text>
+    <text x="230" y="32" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+      4
+    </text>
+    
+    <g transform="translate(15, 70)">
+      <rect width="240" height="110" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#F59E0B"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Homepage redesign
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Review new homepage layout...
+      </text>
+      <rect x="15" y="65" width="70" height="20" rx="10" fill="#FEF3C7"/>
+      <text x="25" y="79" font-family="Arial, sans-serif" font-size="10" fill="#F59E0B">
+        Medium
+      </text>
+      <rect x="95" y="65" width="70" height="20" rx="10" fill="#EEF2FF"/>
+      <text x="105" y="79" font-family="Arial, sans-serif" font-size="10" fill="#4F46E5">
+        🎨 Design
+      </text>
+      <circle cx="25" cy="95" r="10" fill="#8B5CF6"/>
+      <text x="40" y="100" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">
+        Emma W.
+      </text>
+      <text x="180" y="100" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Today
+      </text>
+    </g>
+    
+    <g transform="translate(15, 195)">
+      <rect width="240" height="100" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#10B981"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Search functionality
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Test product search feature...
+      </text>
+      <rect x="15" y="60" width="50" height="20" rx="10" fill="#D1FAE5"/>
+      <text x="25" y="74" font-family="Arial, sans-serif" font-size="10" fill="#10B981">
+        Low
+      </text>
+      <circle cx="25" cy="88" r="10" fill="#F59E0B"/>
+      <text x="180" y="93" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Today
+      </text>
+    </g>
+    
+    <g transform="translate(15, 310)">
+      <rect width="240" height="110" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#EF4444"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Security audit
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">
+        Review security measures...
+      </text>
+      <rect x="15" y="65" width="60" height="20" rx="10" fill="#FEE2E2"/>
+      <text x="28" y="79" font-family="Arial, sans-serif" font-size="10" fill="#EF4444">
+        High
+      </text>
+      <circle cx="25" cy="95" r="10" fill="#EF4444"/>
+      <text x="180" y="100" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Jan 28
+      </text>
+    </g>
+  </g>
+  
+  <!-- Done Column -->
+  <g transform="translate(900, 100)">
+    <rect width="270" height="650" rx="10" fill="white"/>
+    <rect width="270" height="50" rx="10" fill="#D1FAE5"/>
+    <text x="20" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#10B981">
+      ✅ Done
+    </text>
+    <text x="230" y="32" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+      8
+    </text>
+    
+    <g transform="translate(15, 70)">
+      <rect width="240" height="90" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#10B981"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Database setup
+      </text>
+      <rect x="15" y="45" width="70" height="20" rx="10" fill="#D1FAE5"/>
+      <text x="20" y="59" font-family="Arial, sans-serif" font-size="10" fill="#10B981">
+        ✓ Completed
+      </text>
+      <circle cx="25" cy="75" r="10" fill="#4F46E5"/>
+      <text x="40" y="80" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">
+        Alex K.
+      </text>
+      <text x="180" y="80" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Jan 25
+      </text>
+    </g>
+    
+    <g transform="translate(15, 175)">
+      <rect width="240" height="90" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#10B981"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        User authentication
+      </text>
+      <rect x="15" y="45" width="70" height="20" rx="10" fill="#D1FAE5"/>
+      <text x="20" y="59" font-family="Arial, sans-serif" font-size="10" fill="#10B981">
+        ✓ Completed
+      </text>
+      <circle cx="25" cy="75" r="10" fill="#10B981"/>
+      <text x="180" y="80" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Jan 26
+      </text>
+    </g>
+    
+    <g transform="translate(15, 280)">
+      <rect width="240" height="90" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <rect width="240" height="4" rx="2" fill="#10B981"/>
+      <text x="15" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1F2937">
+        Product listing page
+      </text>
+      <rect x="15" y="45" width="70" height="20" rx="10" fill="#D1FAE5"/>
+      <text x="20" y="59" font-family="Arial, sans-serif" font-size="10" fill="#10B981">
+        ✓ Completed
+      </text>
+      <circle cx="25" cy="75" r="10" fill="#8B5CF6"/>
+      <text x="180" y="80" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">
+        📅 Jan 27
+      </text>
+    </g>
+  </g>
+</svg>

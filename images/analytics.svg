@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F9FAFB"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="white"/>
+  <text x="30" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1F2937">
+    Analytics Dashboard
+  </text>
+  <text x="900" y="45" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+    Last updated: Just now
+  </text>
+  
+  <!-- Key Metrics Row -->
+  <g transform="translate(30, 100)">
+    <rect width="270" height="120" rx="10" fill="white"/>
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+      Task Completion Rate
+    </text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#10B981">
+      87.5%
+    </text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="#10B981">
+      ↑ 5.2% from last month
+    </text>
+  </g>
+  
+  <g transform="translate(320, 100)">
+    <rect width="270" height="120" rx="10" fill="white"/>
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+      Avg Response Time
+    </text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#4F46E5">
+      2.4h
+    </text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="#10B981">
+      ↓ 18% faster
+    </text>
+  </g>
+  
+  <g transform="translate(610, 100)">
+    <rect width="270" height="120" rx="10" fill="white"/>
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+      Active Projects
+    </text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#F59E0B">
+      24
+    </text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="#10B981">
+      ↑ 3 new this week
+    </text>
+  </g>
+  
+  <g transform="translate(900, 100)">
+    <rect width="270" height="120" rx="10" fill="white"/>
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">
+      Team Productivity
+    </text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#8B5CF6">
+      92%
+    </text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="#10B981">
+      ↑ 7% improvement
+    </text>
+  </g>
+  
+  <!-- Charts Section -->
+  <!-- Task Completion Trend -->
+  <g transform="translate(30, 250)">
+    <rect width="560" height="300" rx="10" fill="white"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1F2937">
+      Task Completion Trend
+    </text>
+    <text x="20" y="55" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">
+      Last 30 days
+    </text>
+    
+    <!-- Line chart -->
+    <polyline points="40,240 90,220 140,210 190,190 240,200 290,180 340,170 390,160 440,155 490,150 520,140" 
+              fill="none" stroke="#4F46E5" stroke-width="3"/>
+    <polyline points="40,240 90,220 140,210 190,190 240,200 290,180 340,170 390,160 440,155 490,150 520,140" 
+              fill="url(#gradient1)" opacity="0.3"/>
+    
+    <!-- Grid lines -->
+    <line x1="40" y1="90" x2="520" y2="90" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="40" y1="140" x2="520" y2="140" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="40" y1="190" x2="520" y2="190" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="40" y1="240" x2="520" y2="240" stroke="#E5E7EB" stroke-width="1"/>
+    
+    <!-- Y-axis labels -->
+    <text x="25" y="95" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF" text-anchor="end">100</text>
+    <text x="25" y="145" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF" text-anchor="end">75</text>
+    <text x="25" y="195" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF" text-anchor="end">50</text>
+    <text x="25" y="245" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF" text-anchor="end">25</text>
+    
+    <!-- X-axis labels -->
+    <text x="40" y="270" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Week 1</text>
+    <text x="190" y="270" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Week 2</text>
+    <text x="340" y="270" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Week 3</text>
+    <text x="470" y="270" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Week 4</text>
+    
+    <defs>
+      <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:0.3"/>
+        <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:0"/>
+      </linearGradient>
+    </defs>
+  </g>
+  
+  <!-- Project Status Distribution -->
+  <g transform="translate(610, 250)">
+    <rect width="560" height="300" rx="10" fill="white"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1F2937">
+      Project Status Distribution
+    </text>
+    
+    <!-- Donut Chart -->
+    <circle cx="200" cy="180" r="80" fill="none" stroke="#E5E7EB" stroke-width="40"/>
+    
+    <!-- On Track (45%) -->
+    <circle cx="200" cy="180" r="80" fill="none" stroke="#10B981" stroke-width="40" 
+            stroke-dasharray="226 502" transform="rotate(-90 200 180)"/>
+    
+    <!-- At Risk (25%) -->
+    <circle cx="200" cy="180" r="80" fill="none" stroke="#F59E0B" stroke-width="40" 
+            stroke-dasharray="125 502" stroke-dashoffset="-226" transform="rotate(-90 200 180)"/>
+    
+    <!-- Delayed (15%) -->
+    <circle cx="200" cy="180" r="80" fill="none" stroke="#EF4444" stroke-width="40" 
+            stroke-dasharray="75 502" stroke-dashoffset="-351" transform="rotate(-90 200 180)"/>
+    
+    <!-- Completed (15%) -->
+    <circle cx="200" cy="180" r="80" fill="none" stroke="#8B5CF6" stroke-width="40" 
+            stroke-dasharray="75 502" stroke-dashoffset="-426" transform="rotate(-90 200 180)"/>
+    
+    <!-- Legend -->
+    <g transform="translate(320, 110)">
+      <rect width="15" height="15" fill="#10B981"/>
+      <text x="25" y="12" font-family="Arial, sans-serif" font-size="13" fill="#1F2937">
+        On Track (45%)
+      </text>
+      
+      <rect y="30" width="15" height="15" fill="#F59E0B"/>
+      <text x="25" y="42" font-family="Arial, sans-serif" font-size="13" fill="#1F2937">
+        At Risk (25%)
+      </text>
+      
+      <rect y="60" width="15" height="15" fill="#EF4444"/>
+      <text x="25" y="72" font-family="Arial, sans-serif" font-size="13" fill="#1F2937">
+        Delayed (15%)
+      </text>
+      
+      <rect y="90" width="15" height="15" fill="#8B5CF6"/>
+      <text x="25" y="102" font-family="Arial, sans-serif" font-size="13" fill="#1F2937">
+        Completed (15%)
+      </text>
+    </g>
+    
+    <!-- Center text -->
+    <text x="200" y="175" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1F2937" text-anchor="middle">
+      24
+    </text>
+    <text x="200" y="195" font-family="Arial, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">
+      Total Projects
+    </text>
+  </g>
+  
+  <!-- Team Performance -->
+  <g transform="translate(30, 580)">
+    <rect width="560" height="190" rx="10" fill="white"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1F2937">
+      Top Contributors This Month
+    </text>
+    
+    <!-- Bar chart -->
+    <g transform="translate(40, 60)">
+      <!-- Sarah Martinez -->
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">Sarah Martinez</text>
+      <rect x="120" y="8" width="320" height="20" rx="10" fill="#EEF2FF"/>
+      <rect x="120" y="8" width="280" height="20" rx="10" fill="#4F46E5"/>
+      <text x="410" y="22" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">42 tasks</text>
+      
+      <!-- John Davis -->
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">John Davis</text>
+      <rect x="120" y="43" width="320" height="20" rx="10" fill="#EEF2FF"/>
+      <rect x="120" y="43" width="240" height="20" rx="10" fill="#10B981"/>
+      <text x="410" y="57" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">36 tasks</text>
+      
+      <!-- Emma Wilson -->
+      <text x="0" y="90" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">Emma Wilson</text>
+      <rect x="120" y="78" width="320" height="20" rx="10" fill="#EEF2FF"/>
+      <rect x="120" y="78" width="200" height="20" rx="10" fill="#F59E0B"/>
+      <text x="410" y="92" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">30 tasks</text>
+      
+      <!-- Alex Kim -->
+      <text x="0" y="125" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">Alex Kim</text>
+      <rect x="120" y="113" width="320" height="20" rx="10" fill="#EEF2FF"/>
+      <rect x="120" y="113" width="160" height="20" rx="10" fill="#8B5CF6"/>
+      <text x="410" y="127" font-family="Arial, sans-serif" font-size="12" fill="#1F2937">24 tasks</text>
+    </g>
+  </g>
+  
+  <!-- Workload Distribution -->
+  <g transform="translate(610, 580)">
+    <rect width="560" height="190" rx="10" fill="white"/>
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1F2937">
+      Workload Distribution
+    </text>
+    
+    <g transform="translate(40, 70)">
+      <!-- Bar chart showing team capacity -->
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="11" fill="#9CA3AF">Design Team</text>
+      <rect x="100" y="5" width="400" height="18" rx="9" fill="#F3F4F6"/>
+      <rect x="100" y="5" width="320" height="18" rx="9" fill="#4F46E5"/>
+      <text x="430" y="18" font-family="Arial, sans-serif" font-size="11" fill="#1F2937">80%</text>
+      
+      <text x="0" y="45" font-family="Arial, sans-serif" font-size="11" fill="#9CA3AF">Development</text>
+      <rect x="100" y="35" width="400" height="18" rx="9" fill="#F3F4F6"/>
+      <rect x="100" y="35" width="360" height="18" rx="9" fill="#10B981"/>
+      <text x="470" y="48" font-family="Arial, sans-serif" font-size="11" fill="#1F2937">90%</text>
+      
+      <text x="0" y="75" font-family="Arial, sans-serif" font-size="11" fill="#9CA3AF">Marketing</text>
+      <rect x="100" y="65" width="400" height="18" rx="9" fill="#F3F4F6"/>
+      <rect x="100" y="65" width="240" height="18" rx="9" fill="#F59E0B"/>
+      <text x="350" y="78" font-family="Arial, sans-serif" font-size="11" fill="#1F2937">60%</text>
+      
+      <text x="0" y="105" font-family="Arial, sans-serif" font-size="11" fill="#9CA3AF">QA Team</text>
+      <rect x="100" y="95" width="400" height="18" rx="9" fill="#F3F4F6"/>
+      <rect x="100" y="95" width="280" height="18" rx="9" fill="#8B5CF6"/>
+      <text x="390" y="108" font-family="Arial, sans-serif" font-size="11" fill="#1F2937">70%</text>
+    </g>
+  </g>
+</svg>
