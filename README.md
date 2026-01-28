@@ -4,17 +4,11 @@
   <img src="images/logo.svg" alt="Colab Track Logo" width="200"/>
   
   <p><strong>A comprehensive project management and collaboration tool with real-time features, analytics, and enterprise-grade security.</strong></p>
-  
-  ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-  ![License](https://img.shields.io/badge/license-MIT-blue)
-  ![Version](https://img.shields.io/badge/version-1.0.0-orange)
-  ![Java](https://img.shields.io/badge/Java-17+-red)
-  ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.0+-green)
+ 
 </div>
 
 ---
 
-## 📸 Screenshots
 
 <div align="center">
   <img src="images/dashboard.svg" alt="Dashboard View" width="800"/>
