@@ -329,32 +329,7 @@ kubectl get services
 
 ---
 
-## 📄 License
 
-This project is proprietary software. No contributions are accepted.
-
-Created by Dhruv Tripathi. All rights reserved.
-
-See the [LICENSE](LICENSE) file for details.
-
----
-
-## 📊 Roadmap
-
-- [ ] Mobile applications (iOS/Android)
-- [ ] Advanced AI-powered insights
-- [ ] Third-party plugin marketplace
-- [ ] Enhanced reporting capabilities
-- [ ] Multi-language support
-- [ ] Voice and video integration
-
----
-
-## 📄 License
-
-This project is proprietary software - see the [LICENSE](LICENSE) file for details.
-
-Created by Dhruv Tripathi. All rights reserved. No contributions accepted.
 
 ---
 
@@ -364,12 +339,6 @@ Created by Dhruv Tripathi. All rights reserved. No contributions accepted.
 
 ---
 
-## 📞 Support
-
-- 📧 Email: support@colabtrack.com
-- 💬 Discord: [Join our server](https://discord.gg/colabtrack)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/colab-track/issues)
-- 📖 Documentation: [docs.colabtrack.com](https://docs.colabtrack.com)
 
 ---
 
