@@ -1,8 +1,8 @@
 // Configuration file for Colab Track
 const CONFIG = {
     // API Configuration
-    API_BASE_URL: 'http://localhost:8080/api',
-    WS_URL: 'ws://localhost:8080/ws',
+    API_BASE_URL: 'http://localhost:8081/api',
+    WS_URL: 'ws://localhost:8081',
     
     // Application Settings
     APP_NAME: 'Colab Track',

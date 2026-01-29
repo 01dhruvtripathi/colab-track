@@ -14,7 +14,7 @@
     "task-tracking"
   ],
   "author": "Dhruv Tripathi",
-  "license": "PROPRIETARY",
+  "license": "UNLICENSED",
   "devDependencies": {
     "http-server": "^14.1.1"
   }

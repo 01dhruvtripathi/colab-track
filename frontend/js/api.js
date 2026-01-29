@@ -155,6 +155,7 @@ const API = {
         register: (userData) => apiClient.post('/auth/register', userData),
         logout: () => apiClient.post('/auth/logout'),
         refresh: () => apiClient.post('/auth/refresh'),
+        me: () => apiClient.get('/auth/me'),
         oauth: (provider) => apiClient.get(`/auth/oauth/${provider}`),
         verify: (token) => apiClient.get(`/auth/verify/${token}`)
     },
@@ -165,7 +166,7 @@ const API = {
         getById: (id) => apiClient.get(`/users/${id}`),
         update: (id, data) => apiClient.put(`/users/${id}`, data),
         delete: (id) => apiClient.delete(`/users/${id}`),
-        getProfile: () => apiClient.get('/users/me'),
+        getProfile: () => apiClient.get('/auth/me'),
         updateProfile: (data) => apiClient.put('/users/me', data)
     },
 
@@ -181,42 +182,45 @@ const API = {
         removeMember: (id, userId) => apiClient.delete(`/workspaces/${id}/members/${userId}`)
     },
 
-    // Projects
+    // Projects (flat routes)
     projects: {
-        getAll: (workspaceId, params) => apiClient.get(`/workspaces/${workspaceId}/projects`, params),
-        getById: (workspaceId, id) => apiClient.get(`/workspaces/${workspaceId}/projects/${id}`),
-        create: (workspaceId, data) => apiClient.post(`/workspaces/${workspaceId}/projects`, data),
-        update: (workspaceId, id, data) => apiClient.put(`/workspaces/${workspaceId}/projects/${id}`, data),
-        delete: (workspaceId, id) => apiClient.delete(`/workspaces/${workspaceId}/projects/${id}`),
-        archive: (workspaceId, id) => apiClient.post(`/workspaces/${workspaceId}/projects/${id}/archive`),
-        getMembers: (workspaceId, id) => apiClient.get(`/workspaces/${workspaceId}/projects/${id}/members`),
-        addMember: (workspaceId, id, userId) => apiClient.post(`/workspaces/${workspaceId}/projects/${id}/members`, { userId })
+        getAll: (params) => apiClient.get('/projects', params),
+        getById: (id) => apiClient.get(`/projects/${id}`),
+        create: (data) => apiClient.post('/projects', data),
+        update: (id, data) => apiClient.put(`/projects/${id}`, data),
+        delete: (id) => apiClient.delete(`/projects/${id}`),
+        archive: (id) => apiClient.post(`/projects/${id}/archive`),
+        getTasks: (id) => apiClient.get(`/projects/${id}/tasks`)
     },
 
-    // Tasks
+    // Tasks (flat routes)
     tasks: {
-        getAll: (projectId, params) => apiClient.get(`/projects/${projectId}/tasks`, params),
-        getById: (projectId, id) => apiClient.get(`/projects/${projectId}/tasks/${id}`),
-        create: (projectId, data) => apiClient.post(`/projects/${projectId}/tasks`, data),
-        update: (projectId, id, data) => apiClient.put(`/projects/${projectId}/tasks/${id}`, data),
-        delete: (projectId, id) => apiClient.delete(`/projects/${projectId}/tasks/${id}`),
-        updateStatus: (projectId, id, status) => apiClient.patch(`/projects/${projectId}/tasks/${id}/status`, { status }),
-        assign: (projectId, id, userId) => apiClient.post(`/projects/${projectId}/tasks/${id}/assign`, { userId }),
-        addComment: (projectId, id, comment) => apiClient.post(`/projects/${projectId}/tasks/${id}/comments`, { comment }),
-        getComments: (projectId, id) => apiClient.get(`/projects/${projectId}/tasks/${id}/comments`),
-        addAttachment: (projectId, id, file) => apiClient.uploadFile(`/projects/${projectId}/tasks/${id}/attachments`, file)
+        getAll: (params) => apiClient.get('/tasks', params),
+        getById: (id) => apiClient.get(`/tasks/${id}`),
+        create: (data) => apiClient.post('/tasks', data),
+        update: (id, data) => apiClient.put(`/tasks/${id}`, data),
+        delete: (id) => apiClient.delete(`/tasks/${id}`),
+        updateStatus: (id, status) => apiClient.patch(`/tasks/${id}/status`, { status }),
+        assign: (id, userId) => apiClient.post(`/tasks/${id}/assign`, { assigneeId: userId })
     },
 
-    // Teams
+    // Comments
+    comments: {
+        getByTask: (taskId) => apiClient.get(`/comments/tasks/${taskId}`),
+        create: (data) => apiClient.post('/comments', data),
+        update: (id, data) => apiClient.put(`/comments/${id}`, data),
+        delete: (id) => apiClient.delete(`/comments/${id}`)
+    },
+
+    // Teams (flat routes)
     teams: {
-        getAll: (workspaceId) => apiClient.get(`/workspaces/${workspaceId}/teams`),
-        getById: (workspaceId, id) => apiClient.get(`/workspaces/${workspaceId}/teams/${id}`),
-        create: (workspaceId, data) => apiClient.post(`/workspaces/${workspaceId}/teams`, data),
-        update: (workspaceId, id, data) => apiClient.put(`/workspaces/${workspaceId}/teams/${id}`, data),
-        delete: (workspaceId, id) => apiClient.delete(`/workspaces/${workspaceId}/teams/${id}`),
-        getMembers: (workspaceId, id) => apiClient.get(`/workspaces/${workspaceId}/teams/${id}/members`),
-        addMember: (workspaceId, id, userId) => apiClient.post(`/workspaces/${workspaceId}/teams/${id}/members`, { userId }),
-        removeMember: (workspaceId, id, userId) => apiClient.delete(`/workspaces/${workspaceId}/teams/${id}/members/${userId}`)
+        getAll: (params) => apiClient.get('/teams', params),
+        getById: (id) => apiClient.get(`/teams/${id}`),
+        create: (data) => apiClient.post('/teams', data),
+        update: (id, data) => apiClient.put(`/teams/${id}`, data),
+        delete: (id) => apiClient.delete(`/teams/${id}`),
+        addMember: (id, userId) => apiClient.post(`/teams/${id}/members`, { userId }),
+        removeMember: (id, userId) => apiClient.delete(`/teams/${id}/members/${userId}`)
     },
 
     // Notifications
@@ -228,13 +232,13 @@ const API = {
         delete: (id) => apiClient.delete(`/notifications/${id}`)
     },
 
-    // Analytics
+    // Analytics (flat routes)
     analytics: {
-        getDashboard: (workspaceId) => apiClient.get(`/workspaces/${workspaceId}/analytics/dashboard`),
-        getProjectStats: (projectId) => apiClient.get(`/projects/${projectId}/analytics`),
-        getTeamStats: (teamId) => apiClient.get(`/teams/${teamId}/analytics`),
-        getUserStats: (userId) => apiClient.get(`/users/${userId}/analytics`),
-        exportReport: (workspaceId, format, params) => apiClient.get(`/workspaces/${workspaceId}/analytics/export/${format}`, params)
+        getDashboard: () => apiClient.get('/analytics/dashboard'),
+        getProjectStats: (projectId) => apiClient.get(`/analytics/projects/${projectId}`),
+        getTeamStats: (teamId) => apiClient.get(`/analytics/teams/${teamId}/performance`),
+        getUserStats: (userId) => apiClient.get(`/analytics/users/${userId}/productivity`),
+        getWorkload: () => apiClient.get('/analytics/workload')
     },
 
     // Files
@@ -242,17 +246,26 @@ const API = {
         upload: (file, onProgress) => apiClient.uploadFile('/files/upload', file, onProgress),
         getById: (id) => apiClient.get(`/files/${id}`),
         delete: (id) => apiClient.delete(`/files/${id}`),
-        getVersions: (id) => apiClient.get(`/files/${id}/versions`),
         download: (id) => `${apiClient.baseUrl}/files/${id}/download`
     },
 
     // Time Tracking
     timeTracking: {
-        start: (taskId) => apiClient.post(`/tasks/${taskId}/time/start`),
-        stop: (taskId) => apiClient.post(`/tasks/${taskId}/time/stop`),
-        log: (taskId, data) => apiClient.post(`/tasks/${taskId}/time/log`, data),
-        getLogs: (taskId, params) => apiClient.get(`/tasks/${taskId}/time/logs`, params),
+        start: (taskId) => apiClient.post('/time-tracking/start', { taskId }),
+        stop: () => apiClient.post('/time-tracking/stop'),
+        logManual: (data) => apiClient.post('/time-tracking/manual', data),
+        getActive: () => apiClient.get('/time-tracking/active'),
+        getMy: () => apiClient.get('/time-tracking/my'),
+        getByTask: (taskId) => apiClient.get(`/time-tracking/tasks/${taskId}`),
         getReport: (params) => apiClient.get('/time-tracking/report', params)
+    },
+
+    // Activity
+    activity: {
+        getAll: (params) => apiClient.get('/activity', params),
+        getMy: () => apiClient.get('/activity/my'),
+        getByProject: (projectId) => apiClient.get(`/activity/projects/${projectId}`),
+        getByTask: (taskId) => apiClient.get(`/activity/tasks/${taskId}`)
     }
 };
 

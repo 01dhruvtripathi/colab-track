@@ -7,27 +7,37 @@ class NotificationService {
     }
 
     async loadNotifications(forceRefresh = false) {
-        const response = await API.notifications.getAll();
-        
-        if (response.success) {
-            this.notifications = response.data.map(n => new Notification(n));
-            this.updateUnreadCount();
-            this.notifyListeners();
-            return { success: true, data: this.notifications };
-        }
+        try {
+            const response = await API.notifications.getAll();
+            
+            if (response.success && response.data) {
+                const notificationData = response.data.data || response.data || [];
+                this.notifications = Array.isArray(notificationData) ? notificationData : [];
+                this.updateUnreadCount();
+                this.notifyListeners();
+                return { success: true, data: this.notifications };
+            }
 
-        return response;
+            return { success: false, data: [] };
+        } catch (error) {
+            console.error('Error loading notifications:', error);
+            return { success: false, data: [] };
+        }
     }
 
     async loadUnread() {
-        const response = await API.notifications.getUnread();
-        
-        if (response.success) {
-            this.updateUnreadCount();
-            return { success: true, data: response.data };
-        }
+        try {
+            const response = await API.notifications.getUnread();
+            
+            if (response.success) {
+                this.updateUnreadCount();
+                return { success: true, data: response.data?.data || response.data };
+            }
 
-        return response;
+            return response;
+        } catch (error) {
+            return { success: false };
+        }
     }
 
     async markAsRead(notificationId) {

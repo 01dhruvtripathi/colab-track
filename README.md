@@ -329,17 +329,13 @@ kubectl get services
 
 ---
 
-## 🤝 Contributing
+## 📄 License
 
-We welcome contributions! Please follow these steps:
+This project is proprietary software. No contributions are accepted.
 
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. 💾 Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🔄 Open a Pull Request
+Created by Dhruv Tripathi. All rights reserved.
 
-Please read [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on our code of conduct.
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -358,27 +354,13 @@ Please read [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on our code of c
 
 This project is proprietary software - see the [LICENSE](LICENSE) file for details.
 
-Copyright (c) 2024 Dhruv Tripathi. All rights reserved.
+Created by Dhruv Tripathi. All rights reserved. No contributions accepted.
 
 ---
 
-## 👥 Authors
+## 👤 Creator
 
-**Dhruv Tripathi**
-
-- 💼 Project Lead: Dhruv Tripathi
-- 🎨 UI/UX Designer: Dhruv Tripathi
-- 👨‍💻 Backend Developer: Dhruv Tripathi
-- 🌐 Frontend Developer: Dhruv Tripathi
-
----
-
-## 🙏 Acknowledgments
-
-- Built with modern web technologies and best practices
-- Inspired by industry-leading collaboration tools
-- Special thanks to the open-source community
-- Icons by [Font Awesome](https://fontawesome.com)
+- 💼 **Created by**: Dhruv Tripathi
 
 ---
 
@@ -392,6 +374,6 @@ Copyright (c) 2024 Dhruv Tripathi. All rights reserved.
 ---
 
 <div align="center">
-  <p>Made with ❤️ by Dhruv Tripathi</p>
+  <p>Created by Dhruv Tripathi</p>
   <p>⭐ Star us on GitHub if you find this project useful!</p>
 </div>

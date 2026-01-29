@@ -9,7 +9,17 @@ class App {
 
     async init() {
         // Check authentication
-        if (!authManager.requireAuth()) {
+        const token = localStorage.getItem('auth_token');
+        if (!token) {
+            window.location.href = '/login.html';
+            return;
+        }
+
+        // Set token and validate
+        apiClient.setToken(token);
+        const valid = await authManager.validateToken(token);
+        if (!valid) {
+            window.location.href = '/login.html';
             return;
         }
 
@@ -17,9 +27,6 @@ class App {
         if (CONFIG.FEATURES.REAL_TIME_UPDATES) {
             wsManager.connect();
         }
-
-        // Load initial data
-        await this.loadInitialData();
 
         // Initialize views
         this.initViews();
@@ -32,11 +39,11 @@ class App {
 
         // Load notifications
         await notificationService.loadNotifications();
-    }
 
-    async loadInitialData() {
-        // Load workspaces, projects, etc.
-        // This will be implemented based on the current user's data
+        // Initialize dashboard view
+        if (this.views.dashboard) {
+            await this.views.dashboard.init();
+        }
     }
 
     initViews() {

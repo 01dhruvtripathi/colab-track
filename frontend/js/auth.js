@@ -16,11 +16,11 @@ class AuthManager {
 
     async validateToken(token) {
         try {
-            const response = await API.users.getProfile();
-            if (response.success) {
-                this.currentUser = response.data;
+            apiClient.setToken(token);
+            const response = await API.auth.me();
+            if (response.success && response.data.data) {
+                this.currentUser = response.data.data;
                 this.isAuthenticated = true;
-                apiClient.setToken(token);
                 return true;
             }
         } catch (error) {
@@ -33,14 +33,14 @@ class AuthManager {
     async login(credentials) {
         try {
             const response = await API.auth.login(credentials);
-            if (response.success && response.data.token) {
-                apiClient.setToken(response.data.token);
-                this.currentUser = response.data.user;
+            if (response.success && response.data.data && response.data.data.token) {
+                apiClient.setToken(response.data.data.token);
+                this.currentUser = response.data.data.user;
                 this.isAuthenticated = true;
                 localStorage.setItem('user', JSON.stringify(this.currentUser));
                 return { success: true, user: this.currentUser };
             }
-            return { success: false, error: response.error || 'Login failed' };
+            return { success: false, error: response.error || response.data?.error?.message || 'Login failed' };
         } catch (error) {
             return { success: false, error: error.message };
         }
@@ -49,14 +49,14 @@ class AuthManager {
     async register(userData) {
         try {
             const response = await API.auth.register(userData);
-            if (response.success && response.data.token) {
-                apiClient.setToken(response.data.token);
-                this.currentUser = response.data.user;
+            if (response.success && response.data.data && response.data.data.token) {
+                apiClient.setToken(response.data.data.token);
+                this.currentUser = response.data.data.user;
                 this.isAuthenticated = true;
                 localStorage.setItem('user', JSON.stringify(this.currentUser));
                 return { success: true, user: this.currentUser };
             }
-            return { success: false, error: response.error || 'Registration failed' };
+            return { success: false, error: response.error || response.data?.error?.message || 'Registration failed' };
         } catch (error) {
             return { success: false, error: error.message };
         }

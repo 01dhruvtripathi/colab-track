@@ -15,19 +15,12 @@ class DashboardView {
     }
 
     async loadDashboard() {
-        // Load dashboard data
-        const workspaceId = app.getCurrentWorkspace()?.id;
-        if (!workspaceId) {
-            Utils.showEmptyState('#dashboardView', 'Select a workspace to view dashboard');
-            return;
-        }
-
         try {
-            // Load analytics
-            const analyticsResponse = await analyticsService.getDashboard(workspaceId);
+            // Load analytics from flat endpoint
+            const analyticsResponse = await API.analytics.getDashboard();
             
-            if (analyticsResponse.success) {
-                this.updateStats(analyticsResponse.data);
+            if (analyticsResponse.success && analyticsResponse.data.data) {
+                this.updateStats(analyticsResponse.data.data);
             }
 
             // Load recent activity
@@ -45,10 +38,11 @@ class DashboardView {
     }
 
     updateStats(data) {
+        const taskStats = data.taskStats || {};
         this.stats = {
-            totalTasks: data.totalTasks || 0,
-            completedTasks: data.completedTasks || 0,
-            inProgressTasks: data.inProgressTasks || 0,
+            totalTasks: taskStats.total || 0,
+            completedTasks: taskStats.done || 0,
+            inProgressTasks: taskStats.inProgress || 0,
             overdueTasks: data.overdueTasks || 0
         };
 
@@ -65,11 +59,26 @@ class DashboardView {
 
         Utils.showLoading(feed);
 
-        // This would typically come from an API
-        // For now, showing empty state
-        setTimeout(() => {
+        try {
+            const response = await API.activity.getMy();
+            if (response.success && response.data.data && response.data.data.length > 0) {
+                this.renderActivityFeed(feed, response.data.data);
+            } else {
+                Utils.showEmptyState(feed, 'No recent activity', 'fa-clock');
+            }
+        } catch (error) {
             Utils.showEmptyState(feed, 'No recent activity', 'fa-clock');
-        }, 500);
+        }
+    }
+
+    renderActivityFeed(container, activities) {
+        container.innerHTML = activities.slice(0, 5).map(activity => `
+            <div class="activity-item">
+                <i class="fas fa-circle"></i>
+                <span>${activity.description || activity.type}</span>
+                <small>${Utils.formatDate(activity.createdAt)}</small>
+            </div>
+        `).join('');
     }
 
     async loadMyTasks() {
@@ -78,26 +87,31 @@ class DashboardView {
 
         Utils.showLoading(taskList);
 
-        // Load user's tasks
-        const workspaceId = app.getCurrentWorkspace()?.id;
-        if (!workspaceId) {
-            Utils.showEmptyState(taskList, 'Select a workspace');
-            return;
-        }
-
-        // This would load from API
-        setTimeout(() => {
+        try {
+            const response = await API.tasks.getAll();
+            if (response.success && response.data.data && response.data.data.length > 0) {
+                this.renderTaskList(taskList, response.data.data.slice(0, 5));
+            } else {
+                Utils.showEmptyState(taskList, 'No tasks assigned to you', 'fa-tasks');
+            }
+        } catch (error) {
             Utils.showEmptyState(taskList, 'No tasks assigned to you', 'fa-tasks');
-        }, 500);
+        }
+    }
+
+    renderTaskList(container, tasks) {
+        container.innerHTML = tasks.map(task => `
+            <div class="task-item ${task.status.toLowerCase()}">
+                <span class="task-status-badge ${task.status.toLowerCase()}">${task.status}</span>
+                <span class="task-title">${task.title}</span>
+                <span class="task-priority ${task.priority.toLowerCase()}">${task.priority}</span>
+            </div>
+        `).join('');
     }
 
     async loadProjectProgress() {
         const chart = document.getElementById('progressChart');
         if (!chart) return;
-
-        // This would render a chart
-        // For now, showing placeholder
-        chart.innerHTML = '<p>Project progress chart will be rendered here</p>';
     }
 
     setupEventListeners() {

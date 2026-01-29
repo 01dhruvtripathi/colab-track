@@ -1,4 +1,4 @@
-// WebSocket Manager for Real-Time Updates
+// WebSocket Manager for Real-Time Updates (Socket.io)
 class WebSocketManager {
     constructor() {
         this.socket = null;
@@ -20,41 +20,51 @@ class WebSocketManager {
             return;
         }
 
-        const wsUrl = `${CONFIG.WS_URL}?token=${token}`;
-        
-        try {
-            this.socket = new WebSocket(wsUrl);
+        // Check if Socket.io is available
+        if (typeof io === 'undefined') {
+            console.warn('Socket.io not loaded, real-time features disabled');
+            return;
+        }
 
-            this.socket.onopen = () => {
-                console.log('WebSocket connected');
+        try {
+            const wsUrl = CONFIG.WS_URL || CONFIG.API_BASE_URL.replace('/api', '');
+            this.socket = io(wsUrl, {
+                auth: { token },
+                transports: ['websocket', 'polling']
+            });
+
+            this.socket.on('connect', () => {
+                console.log('Socket.io connected');
                 this.isConnected = true;
                 this.reconnectAttempts = 0;
                 this.emit('connected');
-            };
-
-            this.socket.onmessage = (event) => {
-                try {
-                    const message = JSON.parse(event.data);
-                    this.handleMessage(message);
-                } catch (error) {
-                    console.error('Error parsing WebSocket message:', error);
+                
+                // Join user channel
+                const user = authManager.getCurrentUser();
+                if (user) {
+                    this.socket.emit('join:user', user.id);
                 }
-            };
+            });
 
-            this.socket.onerror = (error) => {
-                console.error('WebSocket error:', error);
-                this.emit('error', error);
-            };
-
-            this.socket.onclose = () => {
-                console.log('WebSocket disconnected');
+            this.socket.on('disconnect', () => {
+                console.log('Socket.io disconnected');
                 this.isConnected = false;
                 this.emit('disconnected');
-                this.attemptReconnect();
-            };
+            });
+
+            this.socket.on('connect_error', (error) => {
+                console.warn('Socket.io connection error:', error.message);
+                this.emit('error', error);
+            });
+
+            // Handle incoming events
+            this.socket.on('task:update', (data) => this.handleMessage({ type: 'task:update', data }));
+            this.socket.on('task:create', (data) => this.handleMessage({ type: 'task:create', data }));
+            this.socket.on('project:update', (data) => this.handleMessage({ type: 'project:update', data }));
+            this.socket.on('comment:new', (data) => this.handleMessage({ type: 'comment:new', data }));
+            this.socket.on('notification', (data) => this.handleMessage({ type: 'notification', data }));
         } catch (error) {
-            console.error('WebSocket connection error:', error);
-            this.attemptReconnect();
+            console.error('Socket.io connection error:', error);
         }
     }
 
